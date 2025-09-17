@@ -15,7 +15,9 @@
     "lint": "npx eslint \"{scripts,tests,sites}/**/*.{ts,mts,js}\"",
     "test": "cross-env TZ=Pacific/Nauru npx jest --runInBand",
     "postinstall": "skip-postinstall || npm run api:load",
-    "prepare": "husky"
+    "prepare": "husky",
+    "epg:cron": "npm run grab --- --channels=custom.channels.xml --days=3 --gzip --output=public/guide.xml.gz && node upload.js"
+
   },
   "private": true,
   "license": "UNLICENSED",
