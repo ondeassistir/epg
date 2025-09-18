@@ -38,6 +38,7 @@
     ]
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.384.0",
     "@alex_neo/jest-expect-message": "^1.0.5",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",

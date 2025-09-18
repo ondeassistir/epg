@@ -1,6 +1,6 @@
 // upload.js
-import fs from "fs";
-import AWS from "aws-sdk";
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import fs from 'fs';
 
 // Configuração do R2 usando variáveis de ambiente
 const s3 = new AWS.S3({
