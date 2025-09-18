@@ -38,7 +38,14 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.384.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/s3-request-presigner": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "fast-xml-parser": "^4.0.0",
+    "node-fetch": "^3.3.0",
+    "express": "^4.18.0",
+    "cors": "^2.8.5",
+    "@supabase/supabase-js": "^2.0.0",
     "@alex_neo/jest-expect-message": "^1.0.5",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
