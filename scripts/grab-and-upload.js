@@ -5,10 +5,7 @@ import upload from './upload.js';
 
 // Lista de sites/canais
 const sites = [
-  { name: 'guiadetv', channels: 'sites/guiadetv.com/guiadetv.com.channels.xml', output: 'tmp/guide-guiadetv.xml', gzOutput: 'guiadetv.xml.gz' },
-  { name: 'mi', channels: 'sites/mi.tv/mi.tv_br.channels.xml', output: 'tmp/guide-mi.xml', gzOutput: 'mi.xml.gz' },
-  { name: 'meuguia', channels: 'sites/meuguia.tv/meuguia.tv.channels.xml', output: 'tmp/guide-meuguia.xml', gzOutput: 'meuguia.xml.gz' },
-  { name: 'claro', channels: 'sites/claro.com.br/claro.com.br.channels.xml', output: 'tmp/guide-claro.xml', gzOutput: 'claro.xml.gz' }
+  { name: 'guiadetv', channels: 'sites/guiadetv.com/guiadetv.com.channels.xml', output: 'tmp/guide-guiadetv.xml', gzOutput: 'guiadetv.xml.gz' }
 ];
 
 // Pastas temporária
