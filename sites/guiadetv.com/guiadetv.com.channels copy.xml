@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn">ESPN</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn-2">ESPN 2</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn-3">ESPN 3</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn-4">ESPN 4</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn-5">ESPN 5</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="espn-6">ESPN 6</channel>
+  
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="globo">Globo</channel>
+  
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo">HBO</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-2">HBO 2</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-family">HBO Family</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-mundi">HBO Mundi</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-plus">HBO Plus</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-pop">HBO Pop</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-signature">HBO Signature</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="hbo-xtreme">HBO Xtreme</channel>
+ 
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="paramount-network">Paramount Network</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-2">Premiere 2</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-3">Premiere 3</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-4">Premiere 4</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-5">Premiere 5</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-6">Premiere 6</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-7">Premiere 7</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="premiere-fc">Premiere FC</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="prime-box-brazil">Prime Box Brazil</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="record-news">Record News</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="record-tv">Record TV</channel>
+  
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="rede-tv">Rede TV</channel>
+ 
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="sbt">SBT</channel>
+  
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="space">Space</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="sportv">SporTV</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="sportv-2">SporTV 2</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="sportv-3">SporTV 3</channel>
+  
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tnt">TNT</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tnt-novelas">TNT Novelas</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tnt-series">TNT Séries</channel>
+
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tv-aparecida">TV Aparecida</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tv-brasil">TV Brasil</channel>
+
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tv-cultura">TV Cultura</channel>
+  <channel site="guiadetv.com" lang="pt" xmltv_id="" site_id="tv-gazeta">Tv Gazeta</channel>
+  </channels>
