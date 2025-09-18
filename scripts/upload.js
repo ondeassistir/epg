@@ -1,8 +1,7 @@
 // scripts/upload.js
-const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
-const fs = require('fs');
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import fs from 'fs';
 
-// Configuração do R2 usando variáveis de ambiente
 const s3 = new S3Client({
   endpoint: process.env.R2_ENDPOINT,
   region: 'auto',
@@ -12,19 +11,19 @@ const s3 = new S3Client({
   }
 });
 
-const LOCAL_FILE = 'public/guide.xml.gz';
-const REMOTE_FILE = 'guide.xml.gz';
 const BUCKET = process.env.R2_BUCKET;
 
-async function uploadToR2() {
-  console.log('📤 Iniciando upload para R2...');
+export default async function upload(localFile) {
+  const REMOTE_FILE = localFile.split('/').pop(); // pega o nome do arquivo
 
-  if (!fs.existsSync(LOCAL_FILE)) {
-    console.error(`❌ Arquivo não encontrado: ${LOCAL_FILE}`);
-    process.exit(1);
+  console.log(`📤 Iniciando upload para R2: ${REMOTE_FILE}`);
+
+  if (!fs.existsSync(localFile)) {
+    console.error(`❌ Arquivo não encontrado: ${localFile}`);
+    return;
   }
 
-  const fileContent = fs.readFileSync(LOCAL_FILE);
+  const fileContent = fs.readFileSync(localFile);
 
   try {
     await s3.send(new PutObjectCommand({
@@ -34,11 +33,8 @@ async function uploadToR2() {
       ContentType: 'application/xml'
     }));
 
-    console.log(`✅ Upload concluído! Arquivo disponível em: ${REMOTE_FILE}`);
+    console.log(`✅ Upload concluído: ${REMOTE_FILE}`);
   } catch (err) {
     console.error('❌ Erro no upload:', err);
-    process.exit(1);
   }
 }
-
-module.exports = uploadToR2;
