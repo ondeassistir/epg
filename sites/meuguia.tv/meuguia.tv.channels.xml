@@ -8,35 +8,26 @@
   <channel site="meuguia.tv" lang="pt" xmltv_id="Eurochannel.uk" site_id="EUR">Eurochannel</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="FoxSports2.br" site_id="FS2">Fox Sports 2</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="FoxSports.br" site_id="FSP">Fox Sports</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="FXLatinAmerica.us@Brazil" site_id="CFX">FX</channel>
+
   <channel site="meuguia.tv" lang="pt" xmltv_id="" site_id="GRD">Globo</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="GloboNews.br" site_id="GLN">Globo News</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="Gloob.br" site_id="GOB">Gloob</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="NHKWorldJapan.jp" site_id="NHK">NHK World</channel>
+
+
   <channel site="meuguia.tv" lang="pt" xmltv_id="ParamountNetworkLatinAmerica.us@Brazil" site_id="PAR">Paramount Channel</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="PremiereClubes.br" site_id="121">Premiere Clubes</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="RaiItalia.it@America" site_id="RAI">RAI International</channel>
+
   <channel site="meuguia.tv" lang="pt" xmltv_id="Record.br" site_id="REC">Record TV</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="RecordNews.br" site_id="RCN">Record News</channel>
+
   <channel site="meuguia.tv" lang="pt" xmltv_id="RedeTV.br" site_id="RTV">Rede TV</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="RedeVida.br" site_id="VDA">Rede Vida</channel>
+  
   <channel site="meuguia.tv" lang="pt" xmltv_id="" site_id="SBT">SBT</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="Space.ar@Brazil" site_id="SPA">SPACE</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="SporTV2.br" site_id="SP2">SporTV 2</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="SporTV3.br" site_id="SP3">SporTV 3</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="SporTV.br" site_id="SPO">SporTV</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="TBSLatinAmerica.us@Brazil" site_id="TBS">TBS</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="TNTLatinAmerica.us@Brazil" site_id="TNT">TNT</channel>
+  <cchannel site="meuguia.tv" lang="pt" xmltv_id="TNTLatinAmerica.us@Brazil" site_id="TNT">TNT</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="TNTSeriesLatinAmerica.us@Brazil" site_id="TNS">TNT Séries</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="TV5MondeLatinAmerica.fr" site_id="TV5">TV5 Monde</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="TVAparecida.br" site_id="TAP">TV Aparecida (aberta)</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="TVBrasil.br" site_id="TED">TV Brasil</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="" site_id="CUL">TV Cultura</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="" site_id="TVE">TV Espanha</channel>
   <channel site="meuguia.tv" lang="pt" xmltv_id="TVGazeta.br" site_id="GAZ">TV Gazeta</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="HBO2.br" site_id="HB2">HBO 2</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="HBO.br" site_id="HBO">HBO</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="HBOFamily.br" site_id="HFA">HBO Family</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="HBOPlus.br" site_id="HPL">HBO Plus</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="HBOSignature.br" site_id="HFE">HBO Signature</channel>
-</channels>
+  </channels>

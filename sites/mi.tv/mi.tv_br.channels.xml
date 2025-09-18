@@ -1,53 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <channels>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#amazon-sat-hd">Amazon Sat HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-amazonas-hd">Band Amazonas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-bahia-hd">Band Bahia HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-belem">Band Belém</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-bh-hd">Band BH HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-brasilia">Band Brasília</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-brasilia-hd">Band Brasília HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-campinas">Band Campinas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-campinas-hd">Band Campinas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-curitiba-hd">Band Curitiba HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-hd">Band HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-maceio">Band Maceió</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-maceio-hd">Band Maceió HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-mato-grosso">Band Mato Grosso</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-mato-grosso-hd">Band Mato Grosso HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-minas">Band Minas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-minas-hd">Band Minas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-natal-hd">Band Natal HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-piaui">Band Piauí</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-piaui-hd">Band Piauí HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-porto-alegre">Band Porto Alegre</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-rio">Band Rio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-rio-grande-do-sul-hd">Band Rio Grande do Sul HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-rj-hd">Band RJ HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-roraima">Band Roraima</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-roraima-hd">Band Roraima HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-s-o-luis-tv-maranh-o">Band São Luís - TV Maranhão</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-s-o-luis-tv-maranh-o-hd">Band São Luís - TV Maranhão HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-satelite">Band Satélite</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-satelite-hd">Band Satélite HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-tv-goiania-hd">Band TV Goiânia HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#band-vale">Band Vale</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cnt">CNT</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cnt-bahia">CNT Bahía</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cnt-bahia-hd">CNT Bahía HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cnt-hd">CNT HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cnt-rio">CNT Rio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#combate">Combate</channel>
+  
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#combate-hd">Combate HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#cultura-hd">Cultura HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#e-parana">É-Paraná</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-campinas-1">EPTV Campinas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-campinas-hd">EPTV Campinas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-central">EPTV Central</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-central-hd">EPTV Central HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-ribeir-o-preto">EPTV Ribeirão Preto</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-ribeir-o-preto-hd">EPTV Ribeirão Preto HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#eptv-sul-de-minas">EPTV Sul de Minas</channel>
+  
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#espn-1">ESPN Extra</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#espn-extra">ESPN Extra</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#espn-extra-hd">ESPN Extra HD</channel>
@@ -67,44 +31,15 @@
 
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#gazeta-hd">Gazeta HD</channel>
 
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-anhanguera">Globo Anhanguera</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-belo-horizonte">Globo Belo Horizonte</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-belo-horizonte-hd">Globo Belo Horizonte HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-brasilia-hd">Globo Brasília HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-brasilia-hd-1">Globo Brasília HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-minas">Globo Minas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-natal">Globo Natal</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-news-hd">Globo News HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-recife">Globo Recife</channel>
+
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-rio-hd">Globo Rio HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-s-o-paulo-hd">Globo São Paulo HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-tv-internacional">Globo TV Internacional</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-tv-tem-bauru">Globo TV Tem Bauru</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-tv-tribuna">Globo TV Tribuna</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globo-tv-vanguarda">Globo TV Vanguarda</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#globosat-1">+ Globosat</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#gloob-hd">Gloob HD</channel>
-  
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-2">HBO 2</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-2-hd">HBO 2 HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-hd">HBO HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-plus">HBO Plus</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-plus-1">HBO Plus</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-signature-1">HBO Signature</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#hbo-signature-hd">HBO Signature HD</channel>
-    <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#ideal-tv-hd">Ideal TV HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#inter-tv-alto-litoral">Inter TV Alto Litoral</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#intertv-costa-branca-hd">InterTV Costa Branca HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#intertv-grande-minas">InterTV Grande Minas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#intertv-planicie-hd">InterTV Planície HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#intertv-serra-mar">InterTV Serra Mar</channel>
 
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#nhk-hd">NHK HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#nordestv-hd">NordesTV HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#nsc-tv-blumenau">NSC TV Blumenau</channel>
-    <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#paramount-brasil-hd">Paramount Channel HD</channel>
+  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#paramount-brasil-hd">Paramount Channel HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#play-tv">Play TV</channel>
-    <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-2">Premiere 2</channel>
+  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-2">Premiere 2</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-2-hd">Premiere 2 - HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-3">Premiere 3</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-3-hd">PREMIERE 3 HD</channel>
@@ -128,170 +63,48 @@
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-hd-2">PREMIERE HD 2</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-hd-4">Premiere HD 4</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#premiere-hd-5">Premiere HD 5</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#prime-box-brazil-hd">Prime Box Brazil HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-caxias-do-sul-hd">RBS TV Caxias do Sul HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-cruz-alta-hd">RBS TV Cruz Alta HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-florianopolis">RBS TV Florianópolis</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-hd">RBS TV HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-rio-grande-hd">RBS TV Rio Grande HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-santa-cruz-do-sul-hd">RBS TV Santa Cruz do Sul HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbs-tv-uruguaiana-hd">RBS TV Uruguaiana HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbti">RBTI</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rbti-hd">RBTI HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-aracaju">Record TV Aracaju</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-bahia">Record TV Bahia</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-bauru">Record TV Bauru</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-belem">Record TV Belem</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-brasilia">Record TV Brasília</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-campinas">Record TV Campinas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-campo-grande">Record TV Campo Grande</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-cascavel">Record TV Cascavel</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-cuiaba">Record TV Cuiaba</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-curitiba">Record TV Curitiba</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-florianopolis">Record TV Florianopolis</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-fortaleza">Record TV Fortaleza</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-franca">Record TV Franca</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-goias">Record TV Goiás</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-hd">Record TV HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-international">Record TV International</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-joao-pessoa">Record TV Joao Pessoa</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-maceio">Record TV Maceio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-maringa">Record TV Maringa</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-minas">Record TV Minas</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-natal">Record TV Natal</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-news-hd">Record News HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-porto-alegre">Record TV Porto Alegre</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-rio">Record TV Rio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-santos">Record TV Santos</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-tv-brasilia-hd">Record TV Brasília HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-tv-cabralia-hd">Record TV Cabrália HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#record-tv-rs">Record TV RS</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#recordtv-belem-hd">RecordTV Belém HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#recordtv-cuiaba">RecordTV Cuiabá</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#recordtv-tocantins">RecordTV Tocantins</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-amazonica-rio-branco">Rede Amazônica Rio Branco</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-amazonica-rio-branco-hd">Rede Amazônica Rio Branco HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-boas-novas-hd">Rede Boas Novas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-brasil-hd">Rede Brasil HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-difusora-hd">Rede Difusora HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-familia-hd">Rede Familia HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-genesis-hd">Rede Gênesis HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-globo">Globo</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-globo-aracaju">Globo Aracaju</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-globo-maceio">Globo Maceio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-globo-teresina">Globo Teresina</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-ngt-nova-geracao-de-televisao">Rede NGT</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-ngt-nova-geracao-de-televisao-hd">Rede NGT Nova Geracao de Televisao HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-record-cuiaba-hd">Rede Record Cuiaba HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-record-maceio-hd">Rede Record Maceio HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-record-porto-alegre-hd">Rede Record Porto Alegre HD</channel>
-
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-tv-belem-hd">Rede TV Belem HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-tv-hd">RedeTV! HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-tv-pampa">RedeTV! Pampa</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-tv-sp">RedeTV! SP</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-tv-sul">RedeTV! Sul</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rede-vida-belo-horizonte">Rede Vida Belo Horizonte</channel>
-
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-belem">RedeTV! Belém</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-belo-horizonte-hd">RedeTV! Belo Horizonte HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-fortaleza">RedeTV! Fortaleza</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-fortaleza-hd">RedeTV! Fortaleza HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-manaus">RedeTV! Manaus</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-manaus-hd">RedeTV! Manaus HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-natal">RedeTV! Natal</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-porto-velho">RedeTV! Porto Velho</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-porto-velho-hd">RedeTV! Porto Velho HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-recife-hd">RedeTV! Recife HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-rio-de-janeiro">RedeTV! Rio de Janeiro</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-rio-de-janeiro-hd">RedeTV! Rio de Janeiro HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#redetv-s-o-paulo-hd">RedeTV! São Paulo HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#ric-tv-curitiba-hd">RIC TV Curitiba HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#ric-tv-florianopolis-hd">RIC TV Florianópolis HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rit-hd">RIT HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rpc-cascavel">RPC Cascavel</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rpc-curitiba-hd">RPC Curitiba HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rpc-londrina-hd">RPC Londrina HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rpc-maringa">RPC Maringá</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#rtpi-radiotv-portuguesa-int-l">RTPi RadioTV Portuguesa Int'l</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-belem">SBT Belem</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-belem-hd">SBT Belem HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-belo-horizonte">SBT Belo Horizonte</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-brasilia">SBT Brasilia</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-brasilia-hd">SBT Brasília HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-cascavel">SBT Cascavel</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-criciuma">SBT Criciuma</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-cuiaba">SBT Cuiabá</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-cuiaba-hd">SBT Cuiabá HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-florianopolis">SBT Florianopolis</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-goiania-tv-serra-dourada">SBT Goiania TV Serra Dourada</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-hd">SBT HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-juiz-de-fora">SBT Juiz de Fora</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-maceio">SBT Maceio</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-manaus">SBT Manaus</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-maringa">SBT Maringa</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-ms">SBT MS</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-natal">SBT Natal</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-piaui">SBT Piaui</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-rio-hd">SBT Rio HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-rs">SBT RS</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-rs-hd">SBT RS HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-s-o-paulo">SBT São Paulo</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-s-o-paulo-hd">SBT São Paulo HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-salvador">SBT Salvador</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-santa-catarina-hd">SBT Santa Catarina HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-sergipe">SBT Sergipe</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-sergipe-hd">SBT Sergipe HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-tocantins">SBT Tocantins</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-tocantins-1">SBT Tocantins HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-tv-ponta-verde-hd">SBT TV Ponta Verde HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sbt-vitoria">SBT Vitoria</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#space-hd">Space HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sportv2-hd">SporTV2 HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sportv3-hd">SporTV3 HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#sportv-hd">SporTV HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#tnt-hd">TNT HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#tnt-series-hd">TNT Series HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#travel-box-brazil-hd">Travel Box Brazil HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="" site_id="br#tv-aparecida-hd">TV Aparecida HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="ESPN.br" site_id="br#espn">ESPN Brasil</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="ESPN.us" site_id="br#espn-2">ESPN</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="ESPNExtra.br" site_id="br#espn-plus">ESPN Extra</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="FoxNewsChannel.us" site_id="br#fox-news-channel">Fox News Channel</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="FoxSports2.br" site_id="br#fox-sports-2">FOX Sports 2</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="FoxSports.br" site_id="br#fox-sports">FOX Sports</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="FXLatinAmerica.us@Brazil" site_id="br#fx">FX</channel>
-    <channel site="mi.tv" lang="pt" xmltv_id="HBO2.br" site_id="br#hbo2">HBO2</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBO.br" site_id="br#hbo">HBO</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOFamily.br" site_id="br#hbo-family-hd">HBO Family HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOMundi.br" site_id="br#max-1">HBO Mundi</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOPlus.br" site_id="br#hbo-plus-brasil-hd">HBO Plus HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOPop.br" site_id="br#max-up">HBO Pop</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOSignature.br" site_id="br#hbo-signature">HBO Signature</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="HBOXtreme.br" site_id="br#maxprime">Maxprime</channel>
-
   <channel site="mi.tv" lang="pt" xmltv_id="ParamountNetworkLatinAmerica.us@Brazil" site_id="br#paramount-channel">Paramount Network</channel>
   
   <channel site="mi.tv" lang="pt" xmltv_id="Record.br" site_id="br#record">Record TV</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordNews.br" site_id="br#record-news">Record News</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordRS.br" site_id="br#record-porto-alegre-hd">Record Porto Alegre HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVBelem.br" site_id="br#recordtv-belem">RecordTV Belém</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVCabralia.br" site_id="br#record-cuiaba-hd">Record Cuiabá HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVGoias.br" site_id="br#record-tv-goias-hd">Record TV Goiás HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVItapoan.br" site_id="br#record-tv-itapoan-hd">Record TV Itapoan HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVMinas.br" site_id="br#record-tv-minas-hd">Record TV Minas HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVPaulista.br" site_id="br#recordtv-paulista-hd">RecordTV Paulista HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="RecordTVRio.br" site_id="br#record-tv-rio-hd">Record TV Rio HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="RecordTVSaoPaulo.br" site_id="br#recordtv-s-o-paulo-hd">RecordTV São Paulo HD</channel>
   
   <channel site="mi.tv" lang="pt" xmltv_id="RedeTV.br" site_id="br#rede-tv">RedeTV!</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="RedeTVRondonia.br" site_id="br#redetv-rondonia-hd">RedeTV! Rôndonia HD</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="RedeVida.br" site_id="br#rede-vida">Rede Vida</channel>
  
-  <channel site="mi.tv" lang="pt" xmltv_id="SBTMS.br" site_id="br#sbt-ms-hd">SBT MS HD</channel>
+ 
   <channel site="mi.tv" lang="pt" xmltv_id="SBTNacional.br" site_id="br#sbt">SBT</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="SBTPara.br" site_id="br#sbt-para">SBT Pará</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="SBTRio.br" site_id="br#sbt-rio">SBT Rio</channel>
+ 
 
   <channel site="mi.tv" lang="pt" xmltv_id="Space.ar@Brazil" site_id="br#space">Space</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="SporTV2.br" site_id="br#sportv2">SporTV2</channel>
@@ -303,9 +116,5 @@
  
   <channel site="mi.tv" lang="pt" xmltv_id="TVBrasil.br" site_id="br#tv-brasil">TV Brasil</channel>
  
-  <channel site="mi.tv" lang="pt" xmltv_id="TVGloboBrasilia.br" site_id="br#globo-brasilia">Globo Brasília</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="TVGloboNordeste.br" site_id="br#globo-nordeste-hd">Globo Nordeste HD</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="TVGloboRiodeJaneiro.br" site_id="br#globo-rj">Globo RJ</channel>
-  <channel site="mi.tv" lang="pt" xmltv_id="TVGloboSaoPaulo.br" site_id="br#globo-sp">Globo SP</channel>
   <channel site="mi.tv" lang="pt" xmltv_id="TVGoianiaBand.br" site_id="br#band-tv-goiania">Band TV Goiânia</channel>
  </channels>
