@@ -37,4 +37,9 @@ export default async function upload(localFile) {
   } catch (err) {
     console.error('❌ Erro no upload:', err);
   }
+  if (!process.env.R2_ENDPOINT) {
+  console.error('❌ R2_ENDPOINT não definido!');
+  process.exit(1);
+}
+console.log('R2 endpoint:', process.env.R2_ENDPOINT);
 }
