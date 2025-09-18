@@ -1,45 +1,32 @@
-// scripts/upload.js
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 import fs from 'fs';
+import { S3Client, PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
-const s3 = new S3Client({
+const r2Client = new S3Client({
   endpoint: process.env.R2_ENDPOINT,
   region: 'auto',
   credentials: {
-    accessKeyId: process.env.R2_ACCESS_KEY_ID,
-    secretAccessKey: process.env.R2_SECRET_KEY
-  }
+    accessKeyId: process.env.R2_ACCESS_KEY,
+    secretAccessKey: process.env.R2_SECRET_KEY,
+  },
 });
 
-const BUCKET = process.env.R2_BUCKET;
+export default async function upload(localFilePath, bucketPath) {
+  const fileStream = fs.createReadStream(localFilePath);
 
-export default async function upload(localFile) {
-  const REMOTE_FILE = localFile.split('/').pop(); // pega o nome do arquivo
+  const params = {
+    Bucket: process.env.R2_BUCKET,
+    Key: bucketPath,
+    Body: fileStream,
+    ContentType: "application/gzip",
+    ACL: "private",
+  };
 
-  console.log(`📤 Iniciando upload para R2: ${REMOTE_FILE}`);
+  await r2Client.send(new PutObjectCommand(params));
 
-  if (!fs.existsSync(localFile)) {
-    console.error(`❌ Arquivo não encontrado: ${localFile}`);
-    return;
-  }
+  const command = new GetObjectCommand({ Bucket: process.env.R2_BUCKET, Key: bucketPath });
+  const url = await getSignedUrl(r2Client, command, { expiresIn: 86400 });
 
-  const fileContent = fs.readFileSync(localFile);
-
-  try {
-    await s3.send(new PutObjectCommand({
-      Bucket: BUCKET,
-      Key: REMOTE_FILE,
-      Body: fileContent,
-      ContentType: 'application/xml'
-    }));
-
-    console.log(`✅ Upload concluído: ${REMOTE_FILE}`);
-  } catch (err) {
-    console.error('❌ Erro no upload:', err);
-  }
-  if (!process.env.R2_ENDPOINT) {
-  console.error('❌ R2_ENDPOINT não definido!');
-  process.exit(1);
-}
-console.log('R2 endpoint:', process.env.R2_ENDPOINT);
+  console.log(`✅ Uploaded ${bucketPath} to R2. Presigned URL generated.`);
+  return url;
 }

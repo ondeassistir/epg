@@ -1,91 +1,64 @@
-import fs from "fs";
-import path from "path";
-import zlib from "zlib";
-import { S3Client, PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { createClient } from "@supabase/supabase-js";
+import fs from 'fs';
+import zlib from 'zlib';
+import { execSync } from 'child_process';
+import upload from './upload.js';
 
-// --- VARIÁVEIS ---
-const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
-const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME;
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
+// Lista de sites/canais
+const sites = [
+  { name: 'guiadetv', channels: 'sites/guiadetv.com/guiadetv.com.channels.xml', output: 'tmp/guide-guiadetv.xml', gzOutput: 'guiadetv.xml.gz' },
+  { name: 'mi', channels: 'sites/mi.tv/mi.tv_br.channels.xml', output: 'tmp/guide-mi.xml', gzOutput: 'mi.xml.gz' },
+  { name: 'meuguia', channels: 'sites/meuguia.tv/meuguia.tv.channels.xml', output: 'tmp/guide-meuguia.xml', gzOutput: 'meuguia.xml.gz' },
+  { name: 'claro', channels: 'sites/claro.com.br/claro.com.br.channels.xml', output: 'tmp/guide-claro.xml', gzOutput: 'claro.xml.gz' }
+];
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
+// Pastas temporária
+if (!fs.existsSync('tmp')) fs.mkdirSync('tmp');
 
-// endpoint privado do R2
-const R2_ENDPOINT = `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
+async function main() {
+  const result = {};
 
-const s3Client = new S3Client({
-  region: "auto",
-  endpoint: R2_ENDPOINT,
-  credentials: {
-    accessKeyId: R2_ACCESS_KEY_ID,
-    secretAccessKey: R2_SECRET_ACCESS_KEY,
-  },
-});
+  for (const site of sites) {
+    console.log(`📡 Processing ${site.name}...`);
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+    try {
+      // Gera XML do canal (grab)
+      execSync(`npm run grab --- --channels=${site.channels} --days=3 --output=${site.output}`, { stdio: 'inherit' });
 
-async function uploadAndPresign() {
-  try {
-    console.log("🗜 Compressing guiadetv...");
-    const inputFile = path.resolve("guiadetv.xml");
-    const outputFile = path.resolve("guide-guiadetv.xml.gz");
+      // Comprime em gzip
+      const xmlStream = fs.createReadStream(site.output);
+      const gzipStream = zlib.createGzip();
+      const outStream = fs.createWriteStream(site.gzOutput);
 
-    // gzip
-    const fileContents = fs.readFileSync(inputFile, "utf-8");
-    const gzipped = zlib.gzipSync(fileContents);
-    fs.writeFileSync(outputFile, gzipped);
+      await new Promise((resolve, reject) => {
+        xmlStream.pipe(gzipStream).pipe(outStream)
+          .on('finish', resolve)
+          .on('error', reject);
+      });
 
-    console.log("📤 Uploading guiadetv to R2...");
-    const objectKey = "guide-guiadetv.xml.gz";
+      // Faz upload para R2 (sempre no mesmo path)
+      await upload(site.gzOutput, site.gzOutput);
+      result[site.name] = site.gzOutput;
 
-    // upload
-    await s3Client.send(
-      new PutObjectCommand({
-        Bucket: R2_BUCKET_NAME,
-        Key: objectKey,
-        Body: gzipped,
-        ContentType: "application/gzip",
-      })
-    );
+      // Limpeza de memória
+      xmlStream.destroy();
+      gzipStream.destroy();
+      outStream.destroy();
+      fs.unlinkSync(site.output); // remove XML temporário
+      fs.unlinkSync(site.gzOutput); // remove gzip local
 
-    console.log(`✅ Upload concluído: ${objectKey}`);
-
-    // gerar signed URL (96h = 4 dias)
-    const expiresIn = 96 * 3600;
-    const signedUrl = await getSignedUrl(
-      s3Client,
-      new GetObjectCommand({
-        Bucket: R2_BUCKET_NAME,
-        Key: objectKey,
-      }),
-      { expiresIn }
-    );
-
-    const expiresAt = new Date(Date.now() + expiresIn * 1000).toISOString();
-
-    console.log("🔗 Signed URL gerada (válida até):", expiresAt);
-
-    // salvar no Supabase
-    const { error } = await supabase.from("epg_sources").insert([
-      {
-        source_name: "guiadetv",
-        signed_url: signedUrl,
-        expires_at: expiresAt,
-      },
-    ]);
-
-    if (error) {
-      console.error("❌ Erro ao salvar no Supabase:", error.message);
-    } else {
-      console.log("✅ Signed URL salva no Supabase.");
+    } catch (err) {
+      console.warn(`⚠️ Skipping ${site.name}: ${err.message}`);
+      continue;
     }
-  } catch (err) {
-    console.error("❌ Erro geral:", err);
   }
+
+  console.log('✅ All done!');
+  console.log('Result paths in R2:', result);
+  return result;
 }
 
-uploadAndPresign();
+// Executa
+main().catch(err => {
+  console.error('❌ Unexpected error:', err);
+  process.exit(1);
+});
