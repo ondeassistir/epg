@@ -16,7 +16,7 @@
     "test": "cross-env TZ=Pacific/Nauru npx jest --runInBand",
     "postinstall": "skip-postinstall || npm run api:load",
     "prepare": "husky",
-    "epg:cron": "npm run grab --- --channels=custom.channels.xml --days=3 --gzip --output=public/guide.xml.gz && node upload.js"
+    "epg:cron": "node scripts/grab-and-upload.js"
 
   },
   "private": true,
