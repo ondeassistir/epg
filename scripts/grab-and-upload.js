@@ -1,8 +1,8 @@
 // scripts/grab-and-upload.js
-import fs from 'fs';
-import zlib from 'zlib';
-import { execSync } from 'child_process';
-import upload from './upload.js'; // função default do upload.js
+const fs = require('fs');
+const zlib = require('zlib');
+const { execSync } = require('child_process');
+const upload = require('./upload.js'); // CommonJS, exporta função uploadToR2
 
 // Lista de sites e paths de canais/config
 const sites = [

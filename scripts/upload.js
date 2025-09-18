@@ -1,22 +1,22 @@
 // scripts/upload.js
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
-import fs from 'fs';
+const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
+const fs = require('fs');
 
 // Configuração do R2 usando variáveis de ambiente
 const s3 = new S3Client({
-  endpoint: process.env.R2_ENDPOINT,           // ex: https://<accountid>.r2.cloudflarestorage.com
+  endpoint: process.env.R2_ENDPOINT,
   region: 'auto',
   credentials: {
-    accessKeyId: process.env.R2_ACCESS_KEY_ID, // do Cloudflare R2
+    accessKeyId: process.env.R2_ACCESS_KEY_ID,
     secretAccessKey: process.env.R2_SECRET_KEY
   }
 });
 
-const LOCAL_FILE = 'public/guide.xml.gz'; // arquivo local gerado
-const REMOTE_FILE = 'guide.xml.gz';       // nome final no bucket
-const BUCKET = process.env.R2_BUCKET;     // bucket R2 já criado
+const LOCAL_FILE = 'public/guide.xml.gz';
+const REMOTE_FILE = 'guide.xml.gz';
+const BUCKET = process.env.R2_BUCKET;
 
-export default async function upload() {
+async function uploadToR2() {
   console.log('📤 Iniciando upload para R2...');
 
   if (!fs.existsSync(LOCAL_FILE)) {
@@ -40,3 +40,5 @@ export default async function upload() {
     process.exit(1);
   }
 }
+
+module.exports = uploadToR2;
