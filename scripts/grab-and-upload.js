@@ -1,6 +1,8 @@
+// scripts/grab-and-upload.js
 import fs from 'fs';
 import zlib from 'zlib';
 import { execSync } from 'child_process';
+import upload from './upload.js'; // função default do upload.js
 
 // Lista de sites e paths de canais/config
 const sites = [
@@ -26,49 +28,49 @@ const sites = [
   }
 ];
 
-// Cria pasta temporária se não existir
+// Cria pasta temporária
 if (!fs.existsSync('tmp')) fs.mkdirSync('tmp');
 
-// 1) Roda o grab para cada site
-sites.forEach(site => {
-  console.log(`📡 Downloading guide for ${site.name}...`);
-  try {
-    execSync(
-      `npm run grab --- --channels=${site.channels} --days=3 --output=${site.output}`,
-      { stdio: 'inherit' }
-    );
-  } catch (err) {
-    console.error(`❌ Error downloading guide for ${site.name}`, err);
-    process.exit(1);
+// Função principal
+async function main() {
+  // 1) Roda o grab para cada site
+  for (const site of sites) {
+    console.log(`📡 Downloading guide for ${site.name}...`);
+    try {
+      execSync(`npm run grab --- --channels=${site.channels} --days=3 --output=${site.output}`, { stdio: 'inherit' });
+    } catch (err) {
+      console.error(`❌ Error downloading guide for ${site.name}`, err);
+      process.exit(1);
+    }
   }
-});
 
-// 2) Mescla os XMLs
-console.log('🔗 Merging XMLs...');
-let mergedXml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n';
+  // 2) Mescla os XMLs
+  console.log('🔗 Merging XMLs...');
+  let mergedXml = '<?xml version="1.0" encoding="UTF-8"?>\n<tv>\n';
 
-sites.forEach(site => {
-  const content = fs.readFileSync(site.output, 'utf-8');
-  // remove declaração XML e tags <tv> </tv>
-  const inner = content.replace(/<\?xml.*\?>/, '').replace(/<tv>/, '').replace(/<\/tv>/, '');
-  mergedXml += inner + '\n';
-});
+  for (const site of sites) {
+    const content = fs.readFileSync(site.output, 'utf-8');
+    const inner = content.replace(/<\?xml.*\?>/, '').replace(/<tv>/, '').replace(/<\/tv>/, '');
+    mergedXml += inner + '\n';
+  }
 
-mergedXml += '</tv>';
+  mergedXml += '</tv>';
 
-// 3) Comprime em gzip
-console.log('🗜 Compressing...');
-const gzipped = zlib.gzipSync(mergedXml);
-fs.writeFileSync('public/guide.xml.gz', gzipped);
-console.log('✅ Gzipped guide.xml.gz created.');
+  // 3) Comprime em gzip
+  console.log('🗜 Compressing...');
+  const gzipped = zlib.gzipSync(mergedXml);
+  const localFile = 'public/guide.xml.gz';
+  fs.writeFileSync(localFile, gzipped);
 
-// 4) Faz upload para R2 via Node CLI
-console.log('📤 Uploading to R2...');
-try {
-  execSync('node scripts/upload.js', { stdio: 'inherit' });
-} catch (err) {
-  console.error('❌ Error uploading to R2', err);
-  process.exit(1);
+  // 4) Faz upload para R2
+  console.log('📤 Uploading to R2...');
+  await upload();
+
+  console.log('✅ Done!');
 }
 
-console.log('🎉 Done! All guides merged and uploaded to R2.');
+// Executa
+main().catch(err => {
+  console.error('❌ Unexpected error:', err);
+  process.exit(1);
+});
