@@ -1,6 +1,6 @@
 import fs from 'fs';
 import zlib from 'zlib';
-import { execSync } from 'child_process';
+import { spawn } from 'child_process';
 import upload from './upload.js';
 
 // Lista de sites/canais
@@ -12,6 +12,26 @@ const sites = [
 // Pastas temporária
 if (!fs.existsSync('tmp')) fs.mkdirSync('tmp');
 
+// Função para rodar o grab em modo streaming (evita estourar memória)
+function runGrab(site) {
+  return new Promise((resolve, reject) => {
+    console.log(`📡 Running grab for ${site.name}...`);
+    const args = [
+      'run', 'grab',
+      '--',
+      `--channels=${site.channels}`,
+      '--days=3',
+      `--output=${site.output}`
+    ];
+    const child = spawn('npm', args, { stdio: 'inherit' });
+
+    child.on('close', (code) => {
+      if (code === 0) resolve();
+      else reject(new Error(`grab failed for ${site.name} with code ${code}`));
+    });
+  });
+}
+
 async function main() {
   const result = {};
 
@@ -20,7 +40,7 @@ async function main() {
 
     try {
       // Gera XML do canal (grab)
-      execSync(`npm run grab --- --channels=${site.channels} --days=3 --output=${site.output}`, { stdio: 'inherit' });
+      await runGrab(site);
 
       // Comprime em gzip
       const xmlStream = fs.createReadStream(site.output);

@@ -16,7 +16,7 @@
     "test": "cross-env TZ=Pacific/Nauru npx jest --runInBand",
     "postinstall": "skip-postinstall || npm run api:load",
     "prepare": "husky",
-    "epg:cron": "node scripts/grab-and-upload.js"
+     "epg:cron": "node --max-old-space-size=2048 scripts/grab-and-upload.js"
 
   },
   "private": true,
