@@ -15,6 +15,11 @@ const sites = [
     output: 'tmp/guide-mi.xml'
   },
   {
+    name: 'meuguia',
+    channels: 'sites/meuguia.tv/meuguia.tv.channels.xml',
+    output: 'tmp/guide-meuguia.xml'
+  },
+  {
     name: 'claro',
     channels: 'sites/claro.com.br/claro.com.br.channels.xml',
     output: 'tmp/guide-claro.xml'
