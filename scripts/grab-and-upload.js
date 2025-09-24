@@ -54,7 +54,8 @@ async function main() {
       });
 
       // Faz upload para R2 (sempre no mesmo path)
-      await upload(site.gzOutput, site.gzOutput);
+      // Faz upload para R2 (sem gzip, envia XML direto)
+      await upload(site.output, site.gzOutput); // keep remote name "mi.xml.gz" if you want
       result[site.name] = site.gzOutput;
 
       // Limpeza de memória
