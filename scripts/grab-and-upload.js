@@ -42,28 +42,13 @@ async function main() {
       // Gera XML do canal (grab)
       await runGrab(site);
 
-      // Comprime em gzip
-      const xmlStream = fs.createReadStream(site.output);
-      const gzipStream = zlib.createGzip();
-      const outStream = fs.createWriteStream(site.gzOutput);
-
-      await new Promise((resolve, reject) => {
-        xmlStream.pipe(gzipStream).pipe(outStream)
-          .on('finish', resolve)
-          .on('error', reject);
-      });
-
-      // Faz upload para R2 (sempre no mesmo path)
-      // Faz upload para R2 (sem gzip, envia XML direto)
-      await upload(site.output, site.gzOutput); // keep remote name "mi.xml.gz" if you want
-      result[site.name] = site.gzOutput;
+      // Faz upload para R2 (envia XML direto)
+      // if you want the file in R2 to be named ".xml" instead of ".xml.gz", change site.gzOutput → site.output
+      await upload(site.output, site.output.replace('tmp/', ''));  
+      result[site.name] = site.output;
 
       // Limpeza de memória
-      xmlStream.destroy();
-      gzipStream.destroy();
-      outStream.destroy();
-      fs.unlinkSync(site.output); // remove XML temporário
-      fs.unlinkSync(site.gzOutput); // remove gzip local
+      fs.unlinkSync(site.output); // remove XML temporário local
 
     } catch (err) {
       console.warn(`⚠️ Skipping ${site.name}: ${err.message}`);
@@ -75,6 +60,7 @@ async function main() {
   console.log('Result paths in R2:', result);
   return result;
 }
+
 
 // Executa
 main().catch(err => {
