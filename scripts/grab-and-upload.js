@@ -7,16 +7,35 @@ import { createClient } from "@supabase/supabase-js";
 import { execSync } from "child_process";
 
 // --- VARIABLES ---
-const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
-const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME;
+// Both naming schemes work: R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY /
+// R2_BUCKET_NAME / R2_ACCOUNT_ID, or the R2_ACCESS_KEY / R2_SECRET_KEY /
+// R2_BUCKET / R2_ENDPOINT names this job's deployments are configured with.
+const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID || process.env.R2_ACCESS_KEY;
+const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY || process.env.R2_SECRET_KEY;
+const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || process.env.R2_BUCKET;
 const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID;
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
 
 // R2 endpoint
-const R2_ENDPOINT = `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
+const R2_ENDPOINT =
+  process.env.R2_ENDPOINT || (R2_ACCOUNT_ID && `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`);
+
+const missing = Object.entries({
+  "R2_ACCESS_KEY_ID (or R2_ACCESS_KEY)": R2_ACCESS_KEY_ID,
+  "R2_SECRET_ACCESS_KEY (or R2_SECRET_KEY)": R2_SECRET_ACCESS_KEY,
+  "R2_BUCKET_NAME (or R2_BUCKET)": R2_BUCKET_NAME,
+  "R2_ENDPOINT (or R2_ACCOUNT_ID)": R2_ENDPOINT,
+  SUPABASE_URL,
+  SUPABASE_SERVICE_KEY,
+})
+  .filter(([, value]) => !value)
+  .map(([name]) => name);
+if (missing.length) {
+  console.error(`❌ Missing settings: ${missing.join(", ")}`);
+  process.exit(1);
+}
 
 const s3Client = new S3Client({
   region: "auto",
@@ -29,16 +48,24 @@ const s3Client = new S3Client({
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
-async function grabGuide(site) {
-  console.log(`📡 Running grab for ${site}...`);
+// Each guide keeps its short name for the output file, the R2 key and
+// epg_sources.source_name; dir is its folder under sites/, which is what the
+// grab command reads the *.channels.xml files from.
+const SITES = [
+  { name: "guiadetv", dir: "guiadetv.com" },
+  { name: "mi", dir: "mi.tv" },
+];
+
+async function grabGuide({ name, dir }) {
+  console.log(`📡 Running grab for ${name} (sites/${dir})...`);
   try {
-    execSync(`npm run grab -- --site=${site} --output=guide-${site}.xml`, {
+    execSync(`npm run grab -- --site=${dir} --output=guide-${name}.xml`, {
       stdio: "inherit",
     });
-    console.log(`✅ Grab completed for ${site}`);
-    return `guide-${site}.xml`;
+    console.log(`✅ Grab completed for ${name}`);
+    return `guide-${name}.xml`;
   } catch (error) {
-    console.error(`❌ Grab failed for ${site}:`, error.message);
+    console.error(`❌ Grab failed for ${name}:`, error.message);
     throw error;
   }
 }
@@ -118,26 +145,32 @@ async function uploadAndPresign(site, inputFilePath) {
 }
 
 async function main() {
-  const sites = ["guiadetv", "mi"];
+  const failed = [];
 
-  for (const site of sites) {
+  for (const site of SITES) {
     try {
-      console.log(`\n📡 Processing ${site}...`);
-      
+      console.log(`\n📡 Processing ${site.name}...`);
+
       // Run grab
       const outputFile = await grabGuide(site);
-      
+
       // Upload and generate signed URL
-      await uploadAndPresign(site, outputFile);
-      
-      console.log(`✅ Completed: ${site}\n`);
+      await uploadAndPresign(site.name, outputFile);
+
+      console.log(`✅ Completed: ${site.name}\n`);
     } catch (error) {
-      console.error(`⚠️ Skipping ${site}: ${error.message}`);
-      continue; // Continue with next site
+      console.error(`⚠️ Skipping ${site.name}: ${error.message}`);
+      failed.push(site.name);
     }
   }
-  
-  console.log("🎉 All done!");
+
+  if (failed.length) {
+    // Non-zero exit so the scheduler reports the run as failed.
+    console.error(`❌ Failed: ${failed.join(", ")}`);
+    process.exitCode = 1;
+  } else {
+    console.log("🎉 All done!");
+  }
 }
 
 main().catch((error) => {
