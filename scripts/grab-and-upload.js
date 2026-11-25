@@ -52,7 +52,11 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 // epg_sources.source_name; dir is its folder under sites/, which is what the
 // grab command reads the *.channels.xml files from.
 const SITES = [
-  { name: "guiadetv", dir: "guiadetv.com" },
+  // guiadetv.com was redesigned (its pages no longer have the .row and h3 markup
+  // the parser reads), so every channel returns 0 programs; upstream iptv-org
+  // has the same parser. Re-enable this line once
+  // sites/guiadetv.com/guiadetv.com.config.js parses the new pages.
+  // { name: "guiadetv", dir: "guiadetv.com" },
   { name: "mi", dir: "mi.tv" },
 ];
 
@@ -61,6 +65,9 @@ async function grabGuide({ name, dir }) {
   try {
     execSync(`npm run grab -- --site=${dir} --output=guide-${name}.xml`, {
       stdio: "inherit",
+      // mi.tv's 1,361 channels outgrow Node's default ~500 MB heap while the
+      // guide is assembled. GRAB_HEAP_MB overrides the 1,536 MB used here.
+      env: { ...process.env, NODE_OPTIONS: `--max-old-space-size=${process.env.GRAB_HEAP_MB || 1536}` },
     });
     console.log(`✅ Grab completed for ${name}`);
     return `guide-${name}.xml`;
